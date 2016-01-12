@@ -1,5 +1,5 @@
 ## PPQueue
-#### A priorized persistent background job queue for iOS (a fork from PPQueue).
+#### A priorized persistent background job queue for iOS (a fork from EDQueue).
 
 While `NSOperation` and `NSOperationQueue` work well for some repetitive problems and `NSInvocation` for others, iOS doesn't really include a set of tools for managing large collections of arbitrary background tasks easily. **PPQueue provides a high-level interface for implementing a threaded job queue using [GCD](http://developer.apple.com/library/ios/#documentation/Performance/Reference/GCD_libdispatch_Ref/Reference/reference.html) and [SQLLite3](http://www.sqlite.org/). All you need to do is handle the jobs within the provided delegate method and PPQueue handles the rest.**
 
@@ -117,12 +117,10 @@ PPQueue includes a collection of methods to aid in queue introspection specific 
 - (Boolean)jobExistsForTask:(NSString *)task;
 - (Boolean)jobIsActiveForTask:(NSString *)task;
 - (NSDictionary *)nextJobForTask:(NSString *)task;
+
 /**
 * Removes all jobs older than the time interval.
-*
 * @param {NSString} a sqlite time interval (e.g '-1 day' or '-3 months')
-*
-* @return {void}
 */
 - (void)removeOldJobs:(NSString*)timeInterval;
 ```

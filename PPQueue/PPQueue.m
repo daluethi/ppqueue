@@ -67,15 +67,6 @@ NSString *const PPQueueDidDrain = @"PPQueueDidDrain";
 
 #pragma mark - Public methods
 
-/**
-* Adds a new job to the queue.
-*
-* @param {id} Data
-* @param {NSString} Task label
-* @param {NSUInteger} Priority of job. 0 = highest priority
-*
-* @return {void}
-*/
 - (void)enqueueWithData:(id)data forTask:(NSString *)task withPriority:(NSUInteger)priority {
     if (data == nil) data = @{};
 
@@ -85,73 +76,32 @@ NSString *const PPQueueDidDrain = @"PPQueueDidDrain";
     });
 }
 
-/**
-* Adds a new job to the queue with priority 0.
-*
-* @param {id} Data
-* @param {NSString} Task label
-*
-* @return {void}
-*/
 - (void)enqueueWithData:(id)data forTask:(NSString *)task {
     [self enqueueWithData:data forTask:task withPriority:0];
 }
 
-/**
-* Removes all jobs older than the time interval.
-*
-* @param {NSString} a sqlite time interval (e.g '-1 day' or '-3 months')
-*
-* @return {void}
-*/
 - (void)removeOldJobs:(NSString*)timeInterval {
     [self.engine removeOldJobs:timeInterval];
 }
 
-/**
-* Returns true if a job exists for this task.
-*
-* @param {NSString} Task label
-*
-* @return {Boolean}
-*/
 - (BOOL)jobExistsForTask:(NSString *)task
 {
     BOOL jobExists = [self.engine jobExistsForTask:task];
     return jobExists;
 }
 
-/**
-* Returns true if the active job if for this task.
-*
-* @param {NSString} Task label
-*
-* @return {Boolean}
-*/
 - (BOOL)jobIsActiveForTask:(NSString *)task
 {
     BOOL jobIsActive = [self.activeTask length] > 0 && [self.activeTask isEqualToString:task];
     return jobIsActive;
 }
 
-/**
-* Returns the list of jobs for this
-*
-* @param {NSString} Task label
-*
-* @return {NSArray}
-*/
 - (NSDictionary *)nextJobForTask:(NSString *)task
 {
     NSDictionary *nextJobForTask = [self.engine fetchJobForTask:task];
     return nextJobForTask;
 }
 
-/**
-* Starts the queue.
-*
-* @return {void}
-*/
 - (void)start
 {
     if (!self.isRunning) {
@@ -163,12 +113,6 @@ NSString *const PPQueueDidDrain = @"PPQueueDidDrain";
     }
 }
 
-/**
-* Stops the queue.
-* @note Jobs that have already started will continue to process even after stop has been called.
-*
-* @return {void}
-*/
 - (void)stop
 {
     if (self.isRunning) {
@@ -179,12 +123,6 @@ NSString *const PPQueueDidDrain = @"PPQueueDidDrain";
 
 
 
-/**
-* Empties the queue.
-* @note Jobs that have already started will continue to process even after empty has been called.
-*
-* @return {void}
-*/
 - (void)empty
 {
     [self.engine removeAllJobs];

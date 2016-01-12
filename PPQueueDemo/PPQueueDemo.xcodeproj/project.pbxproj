@@ -16,6 +16,8 @@
 		6518D6B81C2BF7C10061ADF7 /* PPQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6518D6B51C2BF7C10061ADF7 /* PPQueue.m */; };
 		6518D6B91C2BF7C10061ADF7 /* PPQueueStorageEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6518D6B71C2BF7C10061ADF7 /* PPQueueStorageEngine.m */; };
 		A0D276A4189DFB6F23F617AE /* libPods-PPQueueDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A737100A62FEA0B7A72E6EF5 /* libPods-PPQueueDemo.a */; };
+		B02F144560584C531809010B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B02F1B3F0A145BE75E0D9595 /* README.md */; };
+		B02F1627AFC9B15F9C1786D4 /* PPQueue.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B02F1B0BC44A115E6E554B17 /* PPQueue.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		6518D6B61C2BF7C10061ADF7 /* PPQueueStorageEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPQueueStorageEngine.h; path = ../PPQueue/PPQueueStorageEngine.h; sourceTree = "<group>"; };
 		6518D6B71C2BF7C10061ADF7 /* PPQueueStorageEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPQueueStorageEngine.m; path = ../PPQueue/PPQueueStorageEngine.m; sourceTree = "<group>"; };
 		A737100A62FEA0B7A72E6EF5 /* libPods-PPQueueDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPQueueDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02F1B0BC44A115E6E554B17 /* PPQueue.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; name = PPQueue.podspec; path = ../PPQueue.podspec; sourceTree = "<group>"; };
+		B02F1B3F0A145BE75E0D9595 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E1A9C366ED65E40849AED4AD /* Pods-PPQueueDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPQueueDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPQueueDemo/Pods-PPQueueDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +62,8 @@
 				6518D69A1C2BF7830061ADF7 /* Products */,
 				E0DD08F2D781BE7E562A2252 /* Pods */,
 				71B2239930DA16E60A1D20F9 /* Frameworks */,
+				B02F1B0BC44A115E6E554B17 /* PPQueue.podspec */,
+				B02F1B3F0A145BE75E0D9595 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +189,7 @@
 				6518D6AC1C2BF7830061ADF7 /* LaunchScreen.storyboard in Resources */,
 				6518D6A91C2BF7830061ADF7 /* Assets.xcassets in Resources */,
 				6518D6A71C2BF7830061ADF7 /* Main.storyboard in Resources */,
+				B02F1627AFC9B15F9C1786D4 /* PPQueue.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +253,7 @@
 				6518D6A11C2BF7830061ADF7 /* AppDelegate.m in Sources */,
 				6518D6B91C2BF7C10061ADF7 /* PPQueueStorageEngine.m in Sources */,
 				6518D69E1C2BF7830061ADF7 /* main.m in Sources */,
+				B02F144560584C531809010B /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
